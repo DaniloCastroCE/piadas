@@ -27,6 +27,7 @@ const getPiada = () => {
     fetch ('https://v2.jokeapi.dev/joke/Any?type=single')
     .then((response => response.json()))
     .then(data => {
+        //console.log(data)
         let objPiada = {
             categoria : '',
             piada: ''
@@ -43,8 +44,8 @@ const getPiada = () => {
 
             if((objPiada.categoria === '' && objPiada.piada === '') || 
             (objPiada.categoria === undefined && objPiada.piada === undefined)){
-                document.querySelector('#piada').innerHTML = `Desculpe, mas não tenho piada boa para te contar agora.`
-                document.querySelector('#categoria').innerHTML = ``
+                document.querySelector('#piada').innerHTML = `${data.joke}`
+                document.querySelector('#categoria').innerHTML = `Categoria da piada: ${data.category}`
             }else {
                 document.querySelector('#piada').innerHTML = `${objPiada.piada}`
                 document.querySelector('#categoria').innerHTML = `Categoria da piada: ${objPiada.categoria}`
