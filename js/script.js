@@ -89,8 +89,8 @@ const getPiada = () => {
                 categoria.innerHTML = ''
                 ofensiva.innerHTML = ''
 
-                if ((objPiada.categoria === '' && objPiada.piada === '' && data.type === 'single') ||
-                    (objPiada.categoria === undefined && objPiada.piada === undefined && data.type === 'single')) {
+                if ((objPiada.piada === '' && data.type === 'single') ||
+                    (objPiada.piada === undefined && data.type === 'single')) {
                     piada.innerHTML = `${data.joke}`
                     categoria.innerHTML = `Joke Category: ${data.category}`
                     if (data.safe) {
