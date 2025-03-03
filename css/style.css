@@ -1,7 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+body {
+    height: 100vh;
 }
 
 #loading {
@@ -10,7 +16,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .hidden {
@@ -27,35 +33,45 @@
     flex-direction: column;
 }
 
-#boxImg img{
+#boxImg img {
     width: 100px;
     height: 100px;
 }
 
-#boxImg p{
-    color: white;
+#boxImg p {
+
     margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#main {
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
 }
 
 .box-piada {
-    max-width: 600px;
+    max-width: 700px;
     padding: 30px 40px;
-    margin: 20px auto;
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 5px 2px 8px black;
+    margin: 0 auto;
+
 }
 
-.box-piada #piada {
-    margin-bottom: 10px;
+#piada {
+    margin-bottom: 25px;
     font-size: 22px;
 }
 
-.box-piada #categoria {
-    font-size: 14px;
+#categoria,
+#ofensiva {
+    font-size: 12px;
     text-align: end;
 }
 
-#atualizar {
-
+#atualizar button {
+    border: none;
+    cursor: pointer;
 }
+
+
