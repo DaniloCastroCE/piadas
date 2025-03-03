@@ -27,7 +27,6 @@ const getPiada = () => {
     fetch ('https://v2.jokeapi.dev/joke/Any?type=single')
     .then((response => response.json()))
     .then(data => {
-        //console.log(data)
         let objPiada = {
             categoria : '',
             piada: ''
@@ -38,7 +37,6 @@ const getPiada = () => {
         traduzirtexto(data.joke, data.lang, 'pt', (text) => {
             objPiada.piada = text.replace(/\n/g, '<br>')
         })
-        console.log(data)
         setTimeout(() => {
             loading.classList.add('hidden')
             loading.classList.remove('centralizar')
