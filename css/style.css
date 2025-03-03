@@ -58,13 +58,13 @@ body {
 }
 
 #piada {
-    margin-bottom: 25px;
-    font-size: 22px;
+    margin-bottom: 30px;
+    font-size: 30px;
 }
 
 #categoria,
 #ofensiva {
-    font-size: 12px;
+    font-size: 14px;
     text-align: end;
 }
 
